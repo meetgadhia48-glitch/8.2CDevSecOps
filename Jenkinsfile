@@ -33,7 +33,7 @@ pipeline {
                 subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: """<p>Build succeeded!</p>
                          <p>Check the console: <a href="${env.BUILD_URL}console">${env.BUILD_URL}console</a></p>""",
-                to: "YOUR_MAILTRAP_TEST_EMAIL@inbox.mailtrap.io",
+                to: "test@example.com",
                 attachLog: true
             )
         }
@@ -42,7 +42,7 @@ pipeline {
                 subject: "FAILURE: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: """<p>Build failed!</p>
                          <p>Check the console: <a href="${env.BUILD_URL}console">${env.BUILD_URL}console</a></p>""",
-                to: "YOUR_MAILTRAP_TEST_EMAIL@inbox.mailtrap.io",
+                to: "test@example.com",
                 attachLog: true
             )
         }
